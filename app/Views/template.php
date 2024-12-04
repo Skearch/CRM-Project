@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lead Page</title>
+    <title>CRM PROJECT</title>
     <meta name="description" content="Customer Relation Management Project">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
@@ -21,11 +21,11 @@
                     <a href="/salesperson" class="link">Salespersons</a>
                     <a href="/interaction" class="link">Interactions</a>
                     <a href="/transaction" class="link">Transactions</a>
-                    <a href="/accounts" class="link">Accounts</a>
+                    <a href="/product" class="link">Products</a>
                 </div>
             </div>
 
-            <a href="/logout" class="link.logout">Logout</a>
+            <a href="/logout" class="linkLogout">Logout</a>
         </span>
     </div>
 

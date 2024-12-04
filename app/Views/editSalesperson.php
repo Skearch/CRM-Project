@@ -5,7 +5,7 @@
 <body>
 
     <div class="container">
-        <h1>Edit Salespersons</h1>
+        <h1>Edit Salesperson</h1>
 
         <form method="post" action="/updatesalesperson/<?=$salespersons['salespersonid']?>">
 

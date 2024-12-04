@@ -7,7 +7,7 @@ html, body {
     display: flex;
     flex-direction: column;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    background-color: #585857;
+    background-color: #362B2D;
     background-size: 100% 100%;
 }
 
@@ -45,7 +45,7 @@ html, body {
     top: 0;
     width: 100%;
     height: 75px;
-    background-color: #494949;
+    background-color: #997C70;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@ html, body {
     bottom: 0;
     width: 100%;
     height: 55px;
-    background-color: #494949;
+    background-color: #997C70;
     text-align: center;
 }
 
@@ -138,16 +138,24 @@ tr:hover {
 }
 
 .dropdown-label {
-    color: #ffca00;
+    color: #83e071;
+}
+
+.dropdown-label:hover {
+    color: #70bd61;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #353434;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     padding: 12px;
-    z-index: 1;
+    z-index: 0;
+
+
+    background-color: #263238;
+    border: 1px solid #000000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
 }
 
 .dropdown:hover .dropdown-content {
@@ -158,11 +166,11 @@ tr:hover {
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: #ffca00;
+    color: #83e071;
 }
 
 .link:hover {
-    color: #6d742f;
+    color: #70bd61;
 }
 
 /* Cards */
@@ -174,9 +182,12 @@ tr:hover {
 }
 
 .table-card {
-    width: 220px;
+    height: 15%;
+    width: 15%;
     background-color: #263238;
     border: 1px solid #000000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
     color: #FFFFFF;
     padding: 10px;
     margin-bottom: 15px;
@@ -197,21 +208,21 @@ tr:hover {
 /* Links */
 a {
     text-decoration: none;
-    color: #ffca00;
+    color: #83e071;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 a:hover {
-    color: #af8d02;
+    color: #70bd61;
 }
 
-.link\.logout {
-    color: #ff0000; /
+.linkLogout {
+    color: #eb4444;
 }
 
-.link\.logout:hover {
-    color: #9e0404;
+.linkLogout:hover {
+    color: #c53939;
 }
 
 /* Forms */
@@ -223,7 +234,7 @@ form {
 
 /* Label */
 label {
-    color: #ffca00;
+    color: white;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -243,9 +254,8 @@ input[type=submit], input[type=button] {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #6fc9bf;
-    color: white;
+    background-color: #83e071;
+    color: black;
     cursor: pointer;
     margin-bottom: 10px;
 }
-

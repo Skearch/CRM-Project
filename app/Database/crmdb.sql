@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2024 at 06:45 PM
+-- Generation Time: Dec 04, 2024 at 07:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -57,6 +57,14 @@ CREATE TABLE `customers` (
   `assigned_salesperson` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`customerid`, `first_name`, `last_name`, `email`, `phone`, `address`, `registration_date`, `assigned_salesperson`) VALUES
+(1, 'john woa', 'doe', 'johnwoa@yahoo.com', '09244444444', 'caloocan', '2005-02-02', 1),
+(2, 'carl jacob', 'valerozo', 'carljacobvalerozo@gmail.com', '257888333', 'valenzuela', '0006-04-05', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +79,13 @@ CREATE TABLE `interactions` (
   `customerid` int(11) NOT NULL,
   `salespersonid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `interactions`
+--
+
+INSERT INTO `interactions` (`interactionid`, `interaction_date`, `interaction_type`, `notes`, `customerid`, `salespersonid`) VALUES
+(2, '2005-05-02', 'Add', '3', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -89,6 +104,13 @@ CREATE TABLE `leads` (
   `assigned_salesperson` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `leads`
+--
+
+INSERT INTO `leads` (`leadid`, `first_name`, `last_name`, `email`, `phone`, `lead_source`, `lead_status`, `assigned_salesperson`) VALUES
+(1, 'jane', 'doe', 'janedoe@gmail.com', '09222222245', 'Lead Source:', 'W', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -99,6 +121,14 @@ CREATE TABLE `products` (
   `productid` int(11) NOT NULL,
   `product_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`productid`, `product_name`) VALUES
+(1, 'Iphone'),
+(2, 'Laptop');
 
 -- --------------------------------------------------------
 
@@ -121,7 +151,8 @@ CREATE TABLE `salespersons` (
 --
 
 INSERT INTO `salespersons` (`salespersonid`, `first_name`, `last_name`, `email`, `phone`, `hire_date`, `sales_target`) VALUES
-(126, 'First Name:', 'Last Name:', 'Email:', 'Phone:', '0002-02-02', 0);
+(1, 'sarah', 'debro', 'sarah@gmail.com', '09222222222', '2003-04-02', 0),
+(2, 'david', 'ramirez', 'davidramirez@gmail.com', '2256777', '0023-06-25', 2);
 
 -- --------------------------------------------------------
 
@@ -138,6 +169,15 @@ CREATE TABLE `transactions` (
   `quantity` int(11) NOT NULL,
   `total_price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`transactionid`, `transaction_date`, `customerid`, `productid`, `amount`, `quantity`, `total_price`) VALUES
+(1, '2024-12-05', 1, 1, 255, 25, 25000),
+(2, '2024-12-06', 1, 1, 255, 555, 55555),
+(3, '2024-12-07', 1, 1, 5, 2, 356);
 
 --
 -- Indexes for dumped tables
@@ -205,37 +245,37 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customerid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `customerid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `interactions`
 --
 ALTER TABLE `interactions`
-  MODIFY `interactionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `interactionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `leadid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `leadid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10012;
+  MODIFY `productid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `salespersons`
 --
 ALTER TABLE `salespersons`
-  MODIFY `salespersonid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `salespersonid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `transactionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `transactionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

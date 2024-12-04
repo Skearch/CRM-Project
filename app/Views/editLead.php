@@ -5,7 +5,7 @@
 <body>
 
     <div class="container">
-        <h1>Edit Leads</h1>
+        <h1>Edit Lead</h1>
 
         <form method="post" action="/updatelead/<?=$leads['leadid']?>">
 

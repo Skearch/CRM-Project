@@ -11,6 +11,19 @@ $routes->post('/login', 'Home::authenticate');
 $routes->get('/logout', 'Home::logout');
 
 $routes->get('/dashboard', 'Home::dashboard', ['filter' => 'auth']);
+$routes->get('dashboard/getCustomerDistribution', 'DashboardController::getCustomerDistribution');
+$routes->get('/dashboard/getMonthlySales', 'DashboardController::getMonthlySales');
+$routes->get('/dashboard/getInteractionDistribution', 'DashboardController::getInteractionDistribution');
+$routes->get('/dashboard/getLeadDistribution', 'DashboardController::getLeadDistribution');
+
+// ------------------------------------------- About Products ----------------------------------------------------------
+
+$routes->get('/product', 'Home::viewproduct', ['filter' => 'auth']);
+$routes->get('/addproduct', 'ProductController::add', ['filter' => 'auth']);
+$routes->post('/saveproduct', 'ProductController::save', ['filter' => 'auth']);
+$routes->post('/deleteProduct/(:num)', 'ProductController::delete/$1', ['filter' => 'auth']);
+$routes->get('/editproduct/(:num)', 'ProductController::edit/$1', ['filter' => 'auth']);
+$routes->post('/updateproduct/(:num)', 'ProductController::update/$1', ['filter' => 'auth']);
 
 // ------------------------------------------- About Customers ----------------------------------------------------------
 

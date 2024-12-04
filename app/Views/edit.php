@@ -2,10 +2,10 @@
 
 <?= $this->section('content') ?>
 
-<body>
+<body class="mainbody">
 
     <div class="container">
-        <h1>Edit Customers</h1>
+        <h1>Edit Customer</h1>
 
         <form method="post" action="/updatecustomer/<?=$customers['customerid']?>">
 

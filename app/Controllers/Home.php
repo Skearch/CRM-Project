@@ -5,12 +5,13 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-use App\Models\CustomerModel;
-use App\Models\LeadModel;
-use App\Models\SalespersonModel;
-use App\Models\InteractionModel;
-use App\Models\TransactionModel;
 use App\Models\AccountModel;
+use App\Models\CustomerModel;
+use App\Models\InteractionModel;
+use App\Models\LeadModel;
+use App\Models\ProductModel;
+use App\Models\SalespersonModel;
+use App\Models\TransactionModel;
 
 class Home extends BaseController
 {
@@ -79,6 +80,13 @@ class Home extends BaseController
         $model = new LeadModel();
         $data['leads'] = $model->findAll();
         return view('lead', $data);
+    }
+
+    public function viewproduct()
+    {
+        $model = new ProductModel();
+        $data['products'] = $model->findAll();
+        return view('product', $data);
     }
 
     public function viewsalesperson()

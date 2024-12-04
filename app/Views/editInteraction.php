@@ -5,7 +5,7 @@
 <body>
 
     <div class="container">
-        <h1>Edit Interactions</h1>
+        <h1>Edit Interaction</h1>
 
         <form method="post" action="/updateInteraction/<?=$interactions['interactionid']?>">
             <label for="interactiondate">Interaction Date: </label>

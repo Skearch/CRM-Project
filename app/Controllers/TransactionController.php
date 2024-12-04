@@ -27,7 +27,7 @@ class TransactionController extends BaseController
             'total_price' => $this->request->getPost("totalprice")
         ];
         $model->save($data);
-        return redirect()->to("/interaction");
+        return redirect()->to("/transaction");
     }
 
     public function delete($id)
